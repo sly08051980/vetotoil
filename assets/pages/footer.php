@@ -15,7 +15,7 @@ $liensGeneres = [];
 
 $liensGeneresMention=[];
 foreach ($liensFooterContact as $lienFooterContact) {
-    if ($chemin == "/vetotoil/") {
+    if ($chemin == "/vetotoil/" || $chemin == "/vetotoil/index.php" ) {
         if ($lienFooterContact['text'] == 'Connexion') {
             $aFooterHref = "href=assets/pages/{$lienFooterContact['href']}";
         } elseif ($lienFooterContact['text'] == 'Inscription') {
@@ -85,7 +85,7 @@ foreach ($liensFooterMention as $lienFooterMention) {
             <div class="row text-center text-md-left">
                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                     <div class="d-flex justify-content-center">
-                        <img src="./assets/images/logo.png" alt="logo-vetotoil" height="30px" width="30px" class="me-3">
+                        <img src="<?php echo $adresseImages;?>/images/logo.png" alt="logo-vetotoil" height="30px" width="30px" class="me-3">
                         <h5 class="text-uppercase mb-4 font-weight-bold ">Vetotoil</h5>
                     </div>
                     <p>Pour la prise de rendez vous de votre animal préféré</p>
