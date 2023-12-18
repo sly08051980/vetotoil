@@ -7,13 +7,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Politique de confidentialité</title>
 </head>
 
 <body>
-    <header>
+ 
     <?php include "header.php" ?>
-    </header>
+    <main class="pt-4">
     <div class="container mt-5">
         <h1 class="text-center">Politique de confidentialité</h1>
         <p>
@@ -127,10 +128,10 @@
             pouvez envoyer un courriel à <a href="mailto:regnier.sylvain.afpa@gmail.com">regnier.sylvain.afpa@gmail.com</a>.
         </p>
     </div>
-
-    <footer>
+</main>
+   
     <?php include "footer.php" ?>
-</footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
