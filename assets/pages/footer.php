@@ -74,6 +74,20 @@ foreach ($liensFooterMention as $lienFooterMention) {
 
 }
 
+$adresseImages1 = "";
+adressLien1();
+
+function adressLien1()
+{
+    global $adresseImages1;
+    $cheminActuel1 = $_SERVER['REQUEST_URI'];
+    if ($cheminActuel1 === "/vetotoil/"||$cheminActuel1 == "/vetotoil/index.php") {
+        $adresseImages1 = './assets';
+    } else {
+        $adresseImages1 = '..';
+    }
+}
+
 ?>
 
 
@@ -94,14 +108,14 @@ foreach ($liensFooterMention as $lienFooterMention) {
             <div class="row text-center text-md-left">
                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                     <div class="d-flex justify-content-center">
-                        <img src="./assets/images/logo.png" alt="logo-vetotoil" height="30px" width="30px" class="me-3">
+                        <img src="<?php echo $adresseImages1;?>/images/logo.png" alt="logo-vetotoil" height="30px" width="30px" class="me-3">
                         <h5 class="text-uppercase mb-4 font-weight-bold ">Vetotoil</h5>
                     </div>
                     <p>Pour la prise de rendez vous de votre animal préféré</p>
 
                 </div>
                 <div class="col-md-2 col-lg-2 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bold ">Mes services :</h5>
+                    <h5 class="text-uppercase mb-4 font-weight-bold ">Mes services</h5>
                     <?php
 
                     echo "<ul class='list-unstyled text-center'>";
@@ -113,7 +127,7 @@ foreach ($liensFooterMention as $lienFooterMention) {
 
                 </div>
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto pt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bold">Mention Légale :</h5>
+                    <h5 class="text-uppercase mb-4 font-weight-bold">Mention Légale</h5>
                     <?php
 
 echo "<ul class='list-unstyled text-center'>";
@@ -124,10 +138,10 @@ echo "</ul>";
 ?>
                 </div>
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bold">Siège Social :</h5>
+                    <h5 class="text-uppercase mb-4 font-weight-bold">Siège Social</h5>
                     <p><i class="bi bi-house mr-3"></i>6 avenue du Maréchal Ney 13011 Marseille</p>
                     <p><i class="bi bi-envelope mr-3"></i>regnier.sylvain.afpa@gmail.com</p>
-                    <p><i class="bi bi-phone mr-3"></i>06.00.00.00.00</p>
+                    <p><i class="bi bi-phone mr-3"></i>06.20.94.17.45</p>
 
 
 

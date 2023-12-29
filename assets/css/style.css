@@ -1,16 +1,46 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Serif', serif;
+}
+
 .navbar {
-    background: linear-gradient(pink, purple);
+    background: linear-gradient(white, purple);
 }
 h1,h2,strong,span{
     color: purple;
-
+  
 }
+h1,h2{
+    font-style: italic;
+    font-weight: 600;
+}
+strong{
+    font-style: italic;
+}
+
 .taille-image{
     width: 8%;
 }
+.btn-custom {
+    background-color:purple !important;
+    border-radius:28px !important;
+    border:1px solid purple !important;
+    display:inline-block!important;
+    
+   
+width: 100%;
+color: white !important;
+    font-size:17px;
+    padding:16px 31px;
+    text-decoration:none;
+   
+  }
 
 footer {
-	background: linear-gradient(pink, purple);
+	background: linear-gradient(white, purple);
 	text-align: center;
 	padding: 10px;    
 }
@@ -32,4 +62,52 @@ footer li a{
 }
 .social{
     padding-right: 1em;
+}
+li{
+    list-style: none;
+}
+
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    
+   
+.marge{
+    padding-left: 4em;
+}
+.center{
+    padding-left: 10em;
+}
+.btn-custom{
+    width: 80%;
+}
+}
+
+@media only screen and (min-width: 1200px) {
+    .degrader {
+        background: linear-gradient(white, purple);
+        flex: 0 0 16.66667%; /* passer de la col-3 a la deux*/
+        max-width: 16.66667%;
+    }
+    .espace{padding-left: 7em;}
+    .justify-space-around {
+        justify-content: space-around !important;
+      }
+      .btn-custom{
+        width: 40%;
+        cursor:pointer;
+      }
+          .btn-custom:hover {
+        background-color:pink !important;
+        color: purple !important;
+      
+    }
+  
+    .form-list-item:hover {
+        background-color: purple ;
+        cursor: pointer;
+    }
 }

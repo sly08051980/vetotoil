@@ -4,27 +4,28 @@
 
 $liensHeader = [
     ['text' => 'Accueil', 'href' => '#'],
-    ['text' => 'Connexion', 'href' => '#'],
+    ['text' => 'Connexion', 'href' => './assets/pages/inscription.php'],
     ['text' => 'Inscription', 'href' => '#'],
     ['text' => 'Contact', 'href' => '#'],
     
    
 ];
 
-$adresseLienRgpd = "";
+$adresseImages = "";
 adressLien();
 
 function adressLien()
 {
-    global $adresseLienRgpd;
+    global $adresseImages;
     $cheminActuel = $_SERVER['REQUEST_URI'];
-    if ($cheminActuel === "/index.html") {
-        $adresseLienRgpd = '../assets/php/page/mentions-legales.php';
+    if ($cheminActuel === "/vetotoil/"||$cheminActuel == "/vetotoil/index.php") {
+        $adresseImages = './assets';
     } else {
-        $adresseLienRgpd = './mentions-legales.php';
+        $adresseImages = '..';
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -47,7 +48,7 @@ function adressLien()
      
         <div class="container-fluid">
           <div class="d-flex align-items-center">
-            <img src="./assets/images/logo.png" alt="logo-vetotoil" height="30px" width="30px" class="me-3">
+          <img src="<?php echo $adresseImages;?>/images/logo.png" alt="logo-vetotoil" height="30px" width="30px" class="me-3">
             <a class="navbar-brand" href="#">VETOTOIL</a>
           </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
